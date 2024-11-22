@@ -1,10 +1,13 @@
 import "./style.css";
-
 import * as THREE from "three";
-//import { Scene } from 'three';
-
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { MeshBasicMaterial } from "three";
+import {
+  spaceTextureUrl,
+  moonTextureUrl,
+  normalTextureUrl,
+  kobelevTextureUrl,
+} from "./textures";
 
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -57,12 +60,11 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load("space.jpg");
+const spaceTexture = new THREE.TextureLoader().load(spaceTextureUrl);
 scene.background = spaceTexture;
 
 // Avatar
-
-const kobTexture = new THREE.TextureLoader().load("kobelev.png");
+const kobTexture = new THREE.TextureLoader().load(kobelevTextureUrl);
 
 const kobelev = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
@@ -71,10 +73,9 @@ const kobelev = new THREE.Mesh(
 
 scene.add(kobelev);
 
-//Moon
-
-const moonTexture = new THREE.TextureLoader().load("moon.jpg");
-const normalTexture = new THREE.TextureLoader().load("normal.jpg");
+// Moon
+const moonTexture = new THREE.TextureLoader().load(moonTextureUrl);
+const normalTexture = new THREE.TextureLoader().load(normalTextureUrl);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
