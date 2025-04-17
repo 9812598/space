@@ -1,6 +1,6 @@
-﻿import spaceTextureUrl from "./public/images/space.jpg?url";
-import moonTextureUrl from "./public/images/moon.jpg?url";
-import normalTextureUrl from "./public/images/normal.jpg?url";
-import kobelevTextureUrl from "./public/images/kobelev.png?url";
+﻿import spaceTextureUrl from "./public/images/space.jpg";
+import moonTextureUrl from "./public/images/moon.jpg";
+import normalTextureUrl from "./public/images/normal.jpg";
+import kobelevTextureUrl from "./public/images/kobelev.png";
 
 export { spaceTextureUrl, moonTextureUrl, normalTextureUrl, kobelevTextureUrl };
